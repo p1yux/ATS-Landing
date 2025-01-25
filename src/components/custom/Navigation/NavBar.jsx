@@ -37,15 +37,15 @@ const NavBar = () => {
         animate={{ y: 0 }}
         className={`max-w-[83rem] w-full rounded-xl transition-all duration-300 ${
           scrolled 
-            ? 'bg-gradient-to-r from-gray-900/90 to-gray-800/90 shadow-[0_2px_8px_rgba(0,0,0,0.2)] border border-gray-700/50 backdrop-blur-lg' 
-            : 'bg-gradient-to-r from-gray-900/80 to-gray-800/80 shadow-[0_2px_12px_rgba(0,0,0,0.15)] backdrop-blur-md hover:shadow-[0_2px_16px_rgba(0,0,0,0.25)] hover:from-gray-900/85 hover:to-gray-800/85'
+            ? 'bg-white/90 shadow-lg border border-gray-200/50 backdrop-blur-lg' 
+            : 'bg-white/80 shadow-md backdrop-blur-md hover:shadow-lg'
         }`}
       >
         <div className="px-4 lg:px-6">
           <div className="flex items-center justify-between h-16">
             {/* Logo and Brand */}
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
                 Hiremode
               </span>
             </Link>
@@ -54,33 +54,33 @@ const NavBar = () => {
             <div className="hidden md:flex items-center space-x-10">
               <Link 
                 href="/"
-                className="text-gray-300 hover:text-blue-400 transition-colors font-medium"
+                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
               >
                 Home
               </Link>
               <Link 
                 href="/about"
-                className="text-gray-300 hover:text-blue-400 transition-colors font-medium"
+                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
               >
                 About
               </Link>
               <Link 
                 href="/contact"
-                className="text-gray-300 hover:text-blue-400 transition-colors font-medium"
+                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
               >
                 Contact
               </Link>
               <Button 
-                className="bg-gradient-to-r from-blue-500 to-violet-500 text-white hover:from-blue-600 hover:to-violet-600 rounded-full px-6 h-11 shadow-md hover:shadow-lg transition-all duration-300"
+                className="bg-blue-600 text-white hover:bg-blue-700 rounded-full px-6 h-11 shadow-xl hover:shadow-2xl transition-all duration-300"
               >
                 Schedule Demo
               </Button>
             </div>
 
             {/* Mobile Menu Button */}
-            <button className="md:hidden p-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/80 transition-colors">
+            <button className="md:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
               <svg 
-                className="w-6 h-6 text-gray-300" 
+                className="w-6 h-6 text-gray-600" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
