@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Clock, CheckCircle, Zap } from 'lucide-react';
+import Image from 'next/image';
 
 const features = [
   {
@@ -10,7 +11,8 @@ const features = [
     description: "Get your recruitment process up and running in minutes. Our streamlined setup means you can start hiring right away.",
     icon: Clock,
     color: "text-blue-600",
-    bgColor: "bg-blue-50"
+    bgColor: "bg-blue-50",
+    image: "/images/img2.jpg"
   },
   {
     id: 'ai-scoring',
@@ -18,7 +20,8 @@ const features = [
     description: "Our AI engine evaluates and ranks candidates automatically, matching them perfectly with your requirements.",
     icon: Brain,
     color: "text-violet-600",
-    bgColor: "bg-violet-50"
+    bgColor: "bg-violet-50",
+    image: "/images/img3.jpg"
   },
   {
     id: 'automation',
@@ -26,7 +29,8 @@ const features = [
     description: "Keep candidates engaged with smart automated responses. Never miss an opportunity to connect.",
     icon: CheckCircle,
     color: "text-indigo-600",
-    bgColor: "bg-indigo-50"
+    bgColor: "bg-indigo-50",
+    image: "/images/img4.jpg"
   },
   {
     id: 'engagement',
@@ -34,7 +38,8 @@ const features = [
     description: "Maintain high candidate engagement with timely communications and personalized interactions.",
     icon: Zap,
     color: "text-amber-600",
-    bgColor: "bg-amber-50"
+    bgColor: "bg-amber-50",
+    image: "/images/img6.jpg"
   }
 ];
 
@@ -43,47 +48,86 @@ const ATSFor = () => {
   const activeFeatureData = features.find(f => f.id === activeFeature);
 
   return (
-    <section className="min-h-[85vh] w-full flex items-center justify-center relative overflow-hidden py-16">
-      <div className="container mx-auto px-4 lg:px-8 my-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8">
+    <section className="py-16 w-full flex items-center justify-center relative overflow-hidden">
+      <div className="container mx-auto px-4 lg:px-8">
+        {/* Updated Section Header */}
+        <div className="text-center max-w-4xl mx-auto mb-8">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-block px-4 py-1.5 mb-3 text-sm font-medium bg-gradient-to-r from-violet-600/10 to-blue-600/10 text-violet-600 rounded-full"
+          >
+            Features & Capabilities
+          </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-gray-900"
+            className="text-4xl md:text-5xl font-bold mb-3 tracking-tight"
           >
-            The ATS for Organizations
-            <span className="block text-xl md:text-2xl text-gray-600 mt-1">
-              and startups that want to scale
+            <span className="bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
+              The ATS for Organizations
+            </span>
+            <span className="block text-2xl md:text-3xl text-gray-600 mt-4 font-normal">
+              that want to{' '}
+              <span className="relative inline-block">
+                scale faster
+                <motion.svg
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  viewport={{ once: true }}
+                  className="absolute -bottom-2 left-0 w-full"
+                  width="100%"
+                  height="6"
+                  viewBox="0 0 100 6"
+                  preserveAspectRatio="none"
+                >
+                  <motion.path
+                    d="M0 5.5Q25 0 50 5.5Q75 11 100 5.5"
+                    stroke="#8B5CF6"
+                    strokeWidth="2"
+                    fill="none"
+                  />
+                </motion.svg>
+              </span>
             </span>
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-lg text-gray-600 max-w-2xl mx-auto"
+          >
+            Streamline your recruitment process with AI-powered tools and automation that help you find the perfect candidates faster.
+          </motion.p>
         </div>
 
         {/* Main Content */}
-        <div className="flex gap-12 max-w-7xl mx-auto">
+        <div className="flex gap-8 max-w-7xl mx-auto items-center">
           {/* Feature List */}
           <div className="w-1/2 space-y-2 pr-4">
             {features.map((feature) => (
               <motion.button
                 key={feature.id}
                 onClick={() => setActiveFeature(feature.id)}
-                className={`w-full text-left p-5 rounded-xl transition-all duration-300 ${
+                className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${
                   activeFeature === feature.id 
                     ? `${feature.bgColor} shadow-sm border border-${feature.color}/20` 
                     : 'hover:bg-gray-50'
                 }`}
                 whileHover={{ x: activeFeature === feature.id ? 0 : 4 }}
               >
-                <div className="flex items-start gap-4">
-                  <feature.icon className={`w-6 h-6 ${feature.color} mt-1`} />
+                <div className="flex items-start gap-3">
+                  <feature.icon className={`w-5 h-5 ${feature.color} mt-1`} />
                   <div>
-                    <h3 className={`text-lg font-semibold mb-1.5 ${
+                    <h3 className={`text-base font-semibold mb-1 ${
                       activeFeature === feature.id ? feature.color : 'text-gray-900'
                     }`}>
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-sm text-gray-600 leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -93,20 +137,29 @@ const ATSFor = () => {
           </div>
 
           {/* Visual Display */}
-          <div className="w-1/2">
+          <div className="w-1/2 flex items-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeFeature}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="relative h-[500px] rounded-2xl overflow-hidden bg-gradient-to-tr from-gray-50 to-white shadow-2xl"
+                className="relative h-[400px] w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-gray-50 to-white shadow-2xl"
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/5 to-gray-900/0" />
-                <div className="relative h-full flex items-center justify-center p-10">
-                  <activeFeatureData.icon className={`w-28 h-28 ${activeFeatureData.color}`} />
+                <div className="relative h-full">
+                  <Image
+                    src={activeFeatureData.image}
+                    alt={activeFeatureData.title}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <activeFeatureData.icon className={`w-16 h-16 ${activeFeatureData.color} opacity-20`} />
+                  </div>
                 </div>
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f1f1_1px,transparent_1px),linear-gradient(to_bottom,#f1f1f1_1px,transparent_1px)] bg-[size:2rem_2rem] [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]" />
               </motion.div>
             </AnimatePresence>
           </div>
