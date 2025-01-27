@@ -48,7 +48,7 @@ const ATSFor = () => {
   const activeFeatureData = features.find(f => f.id === activeFeature);
 
   return (
-    <section className="py-16 w-full flex items-center justify-center relative overflow-hidden">
+    <section className="py-8 lg:py-16 w-full flex items-center justify-center relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Updated Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-8">
@@ -56,6 +56,7 @@ const ATSFor = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="inline-block px-4 py-1.5 mb-3 text-sm font-medium bg-gradient-to-r from-violet-600/10 to-blue-600/10 text-violet-600 rounded-full"
           >
             Features & Capabilities
@@ -64,6 +65,7 @@ const ATSFor = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="text-4xl md:text-5xl font-bold mb-3 tracking-tight"
           >
             <span className="bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
@@ -77,6 +79,7 @@ const ATSFor = () => {
                   initial={{ pathLength: 0 }}
                   whileInView={{ pathLength: 1 }}
                   viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
                   className="absolute -bottom-2 left-0 w-full"
                   width="100%"
                   height="6"
@@ -97,7 +100,7 @@ const ATSFor = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg text-gray-600 max-w-2xl mx-auto"
           >
             Streamline your recruitment process with AI-powered tools and automation that help you find the perfect candidates faster.
@@ -105,12 +108,16 @@ const ATSFor = () => {
         </div>
 
         {/* Main Content */}
-        <div className="flex gap-8 max-w-7xl mx-auto items-center">
+        <div className="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto items-center">
           {/* Feature List */}
-          <div className="w-1/2 space-y-2 pr-4">
-            {features.map((feature) => (
+          <div className="w-full lg:w-1/2 space-y-2 order-2 lg:order-1 lg:pr-4">
+            {features.map((feature, index) => (
               <motion.button
                 key={feature.id}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                 onClick={() => setActiveFeature(feature.id)}
                 className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${
                   activeFeature === feature.id 
@@ -137,14 +144,15 @@ const ATSFor = () => {
           </div>
 
           {/* Visual Display */}
-          <div className="w-1/2 flex items-center">
+          <div className="w-full lg:w-1/2 order-1 lg:order-2 mb-8 lg:mb-0">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeFeature}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="relative h-[400px] w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-gray-50 to-white shadow-2xl"
+                transition={{ duration: 0.3 }}
+                className="relative h-[300px] lg:h-[400px] w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-gray-50 to-white shadow-2xl"
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/5 to-gray-900/0" />
                 <div className="relative h-full">

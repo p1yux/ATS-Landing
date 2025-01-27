@@ -1,6 +1,7 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import debounce from 'lodash/debounce';
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,27 +14,30 @@ const ChatBot = () => {
   ]);
   const [inputMessage, setInputMessage] = useState('');
 
-  const handleSendMessage = (e) => {
-    e.preventDefault();
-    if (!inputMessage.trim()) return;
-
-    // Add user message
-    const newMessages = [...messages, {
-      type: 'user',
-      content: inputMessage,
-      timestamp: new Date()
-    }];
-    setMessages(newMessages);
-    setInputMessage('');
-
-    // Simulate bot response
-    setTimeout(() => {
-      setMessages([...newMessages, {
+  // Add debouncing for message handling
+  const debouncedMessageHandler = useCallback(
+    debounce((message) => {
+      setMessages(prev => [...prev, {
         type: 'bot',
         content: "Thanks for your message! Our AI is processing your request. A team member will get back to you shortly.",
         timestamp: new Date()
       }]);
-    }, 1000);
+    }, 300),
+    []
+  );
+
+  const handleSendMessage = (e) => {
+    e.preventDefault();
+    if (!inputMessage.trim()) return;
+
+    setMessages(prev => [...prev, {
+      type: 'user',
+      content: inputMessage,
+      timestamp: new Date()
+    }]);
+    setInputMessage('');
+
+    debouncedMessageHandler(inputMessage);
   };
 
   return (

@@ -106,10 +106,12 @@ const Companies = () => {
           initial={{ x: 0 }}
           animate={{ x: "-50%" }}
           transition={{
-            duration: 30,
+            duration: 40,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
+            repeatType: "loop"
           }}
+          style={{ willChange: 'transform' }}
           className="flex items-center gap-16 whitespace-nowrap"
         >
           {companies.map((company, index) => (
@@ -123,7 +125,9 @@ const Companies = () => {
                   alt={`${company.name} logo`}
                   fill
                   className="object-contain"
-                  unoptimized
+                  loading="lazy"
+                  quality={75}
+                  sizes="(max-width: 768px) 100vw, 200px"
                 />
               </div>
             </div>

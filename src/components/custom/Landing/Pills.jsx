@@ -53,13 +53,18 @@ const Pills = () => {
     }
   ];
 
+  // Memoize static content
+  const MemoizedBackground = React.memo(() => (
+    <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e5e5_1px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-100/50 to-gray-50/50"></div>
+    </div>
+  ));
+
   return (
     <section className="py-6 relative overflow-hidden min-h-[35vh] bg-gray-50/80">
       {/* Shared Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e5e5_1px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-100/50 to-gray-50/50"></div>
-      </div>
+      <MemoizedBackground />
 
       <div className="container mx-auto px-4 relative z-10 max-w-7xl">
         {/* First Part Content */}
@@ -131,6 +136,8 @@ const Pills = () => {
                   width={600}
                   height={450}
                   className="w-full h-auto"
+                  loading="lazy"
+                  quality={85}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>

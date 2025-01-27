@@ -30,26 +30,26 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section id="faq" className="py-12 bg-white">
+    <section id="faq" className="py-8 md:py-12 bg-white">
       <div className="container mx-auto px-4 max-w-5xl">
         {/* Section Header */}
-        <div className="max-w-2xl mx-auto text-center mb-8">
+        <div className="max-w-2xl mx-auto text-center mb-6 md:mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex items-center justify-center gap-4 mb-3"
+            className="flex items-center justify-center gap-3 md:gap-4 mb-3"
           >
-            <div className="h-[1px] w-8 bg-blue-600/30"></div>
-            <span className="text-sm font-medium text-blue-600 uppercase tracking-wider">FAQ</span>
-            <div className="h-[1px] w-8 bg-blue-600/30"></div>
+            <div className="h-[1px] w-6 md:w-8 bg-blue-600/30"></div>
+            <span className="text-xs md:text-sm font-medium text-blue-600 uppercase tracking-wider">FAQ</span>
+            <div className="h-[1px] w-6 md:w-8 bg-blue-600/30"></div>
           </motion.div>
           
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-display font-bold mb-3"
+            className="text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-2 md:mb-3"
           >
             <span className="text-blue-600">Frequently</span>{' '}
             <span className="text-gray-900">Asked Questions</span>
@@ -59,14 +59,14 @@ const FAQ = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-gray-600"
+            className="text-sm md:text-base text-gray-600 px-4"
           >
             Everything you need to know about our AI-powered recruitment platform
           </motion.p>
         </div>
 
         {/* FAQ Items */}
-        <div className="space-y-3">
+        <div className="space-y-2 md:space-y-3">
           {faqs.map((faq, index) => (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -80,24 +80,24 @@ const FAQ = () => {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className={`w-full py-4 px-6 flex items-center justify-between gap-4 text-left transition-all duration-300 ${
+                className={`w-full py-3 md:py-4 px-4 md:px-6 flex items-center justify-between gap-3 md:gap-4 text-left transition-all duration-300 ${
                   openIndex === index 
                     ? 'text-blue-600' 
                     : 'text-gray-900 hover:text-blue-600'
                 }`}
               >
-                <span className="text-base md:text-lg font-display font-semibold">
+                <span className="text-sm md:text-base lg:text-lg font-display font-semibold">
                   {faq.question}
                 </span>
-                <div className={`flex-shrink-0 p-1.5 rounded-lg transition-all duration-300 ${
+                <div className={`flex-shrink-0 p-1 md:p-1.5 rounded-lg transition-all duration-300 ${
                   openIndex === index 
                     ? 'bg-blue-100 text-blue-600' 
                     : 'bg-gray-100 text-gray-500'
                 }`}>
                   {openIndex === index ? (
-                    <Minus className="w-4 h-4" />
+                    <Minus className="w-3 h-3 md:w-4 md:h-4" />
                   ) : (
-                    <Plus className="w-4 h-4" />
+                    <Plus className="w-3 h-3 md:w-4 md:h-4" />
                   )}
                 </div>
               </button>
@@ -110,7 +110,7 @@ const FAQ = () => {
                     transition={{ duration: 0.2 }}
                     className="overflow-hidden"
                   >
-                    <p className="px-6 pb-4 text-gray-600 leading-relaxed text-base">
+                    <p className="px-4 md:px-6 pb-3 md:pb-4 text-gray-600 leading-relaxed text-sm md:text-base">
                       {faq.answer}
                     </p>
                   </motion.div>

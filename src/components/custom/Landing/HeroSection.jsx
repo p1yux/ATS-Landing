@@ -67,14 +67,14 @@ const HeroSection = () => {
       </div>
 
       {/* Main Content Container */}
-      <div className="container relative z-10 mx-auto px-4 pt-20">
-        <div className="flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto gap-16">
+      <div className="container relative z-10 mx-auto px-4 pt-32 lg:pt-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto gap-8 lg:gap-16">
           {/* Left Column - Text Content */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="flex-1 space-y-8 max-w-xl lg:max-w-none lg:pr-8"
+            className="flex-1 space-y-6 lg:space-y-8 max-w-xl lg:max-w-none lg:pr-8"
           >
             {/* Badge */}
             <motion.div variants={itemVariants}>
@@ -85,21 +85,21 @@ const HeroSection = () => {
             </motion.div>
 
             {/* Headline */}
-            <motion.div variants={itemVariants} className="space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+            <motion.div variants={itemVariants} className="space-y-4 lg:space-y-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-center lg:text-left">
                 <span className="text-gray-900">Revolutionize Your</span>{' '}
                 <span className="bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
                   Recruitment
                 </span>
               </h1>
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-center lg:text-left">
                 Transform your hiring process with AI-driven automation. Reduce time-to-hire by{' '}
                 <span className="text-violet-600 font-semibold">70%</span> while improving candidate quality through data-driven insights.
               </p>
             </motion.div>
 
             {/* CTA Button */}
-            <motion.div variants={itemVariants}>
+            <motion.div variants={itemVariants} className="flex justify-center lg:justify-start">
               <Button 
                 size="lg" 
                 className="h-14 px-8 bg-violet-600 text-white rounded-full shadow-xl hover:shadow-2xl hover:bg-violet-700 transition-all duration-300 text-lg font-medium flex items-center gap-3"
@@ -112,7 +112,7 @@ const HeroSection = () => {
             {/* Stats */}
             <motion.div
               variants={itemVariants}
-              className="grid grid-cols-2 gap-4 pt-4"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 pt-4"
             >
               {[
                 { icon: Clock, label: "Time-to-hire", value: "70% Faster" },
@@ -142,9 +142,9 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex-1 w-full max-w-2xl lg:max-w-none relative"
+            className="flex-1 w-full max-w-md lg:max-w-none relative mt-8 lg:mt-0"
           >
-            <div className="relative w-full aspect-[4/3]">
+            <div className="relative w-full aspect-[4/3] px-4 lg:px-0">
               <Image
                 src="/images/herosection.jpg"
                 alt="AI Recruitment Platform"
@@ -152,6 +152,8 @@ const HeroSection = () => {
                 className="object-cover rounded-2xl shadow-2xl"
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
+                loading="eager"
+                quality={85}
               />
               
               {/* Floating UI Elements */}
