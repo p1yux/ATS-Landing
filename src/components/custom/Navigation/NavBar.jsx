@@ -28,6 +28,22 @@ const NavBar = () => {
     };
   }, [prevScrollPos]);
 
+  // Smooth scroll handler
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      const offset = 80; // Adjust this value based on your navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <div className={`w-full flex justify-center fixed top-0 left-0 right-0 z-50 px-6 pt-4 transition-transform duration-300 ${
       visible ? 'translate-y-0' : '-translate-y-full'
@@ -51,19 +67,27 @@ const NavBar = () => {
             </Link>
 
             {/* Navigation Links */}
-            <div className="hidden md:flex items-center space-x-10">
+            <div className="hidden md:flex items-center space-x-8">
               <Link 
                 href="/"
                 className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
               >
                 Home
               </Link>
-              <Link 
-                href="/about"
-                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              <a 
+                href="#about"
+                onClick={(e) => handleNavClick(e, 'about')}
+                className="text-gray-600 hover:text-blue-600 transition-colors font-medium cursor-pointer"
               >
                 About
-              </Link>
+              </a>
+              <a 
+                href="#faq"
+                onClick={(e) => handleNavClick(e, 'faq')}
+                className="text-gray-600 hover:text-blue-600 transition-colors font-medium cursor-pointer"
+              >
+                FAQ
+              </a>
               <Link 
                 href="/contact"
                 className="text-gray-600 hover:text-blue-600 transition-colors font-medium"

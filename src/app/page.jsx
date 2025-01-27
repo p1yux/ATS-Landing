@@ -6,6 +6,8 @@ import ChatBotWrapper from "@/components/custom/Chatbot/ChatBotWrapper";
 import ATSFor from "@/components/custom/Landing/ATSFor";
 import Pills from "@/components/custom/Landing/Pills";
 import Companies from "@/components/custom/Landing/Companies";
+import About from "@/components/custom/Landing/About";
+import FAQ from "@/components/custom/Landing/FAQ";
 
 export default function Home() {
   return (
@@ -15,10 +17,11 @@ export default function Home() {
       <Companies />
       <ATSFor />
       <Pills />
-      <Testimonials />
+      <About />
+      <FAQ />
+      {/* <Testimonials /> */}
       <Footer />
       <ChatBotWrapper />
-      {/* Other sections */}
     </main>
   );
 }
