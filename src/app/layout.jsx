@@ -16,8 +16,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "Hiremode - AI-Powered Recruitment Platform",
-  description: "Transform your hiring process with AI-powered insights, intelligent screening, and seamless candidate management.",
+  title: "Hiremode - Intelligent Talent Platform",
+  description: "Transform your hiring process with smart automation, data-driven insights, and seamless candidate management.",
 };
 
 export default function RootLayout({ children }) {

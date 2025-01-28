@@ -38,7 +38,16 @@ const NavBar = () => {
     // Close mobile menu first
     setMobileMenuOpen(false);
     
-    // Small delay to allow menu close animation to complete
+    // Check if we're on the /try page
+    const isOnTryPage = window.location.pathname === '/try';
+    
+    if (isOnTryPage) {
+      // Navigate to home page with hash
+      window.location.href = `/#${targetId}`;
+      return;
+    }
+    
+    // If on home page, scroll to section
     setTimeout(() => {
       const element = document.getElementById(targetId);
       if (element) {
@@ -98,12 +107,6 @@ const NavBar = () => {
               >
                 FAQ
               </a>
-              <Link 
-                href="/contact"
-                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
-              >
-                Contact
-              </Link>
               <Button 
                 className="bg-blue-600 text-white hover:bg-blue-700 rounded-full px-6 h-11 shadow-xl hover:shadow-2xl transition-all duration-300"
               >
@@ -156,13 +159,6 @@ const NavBar = () => {
                   >
                     FAQ
                   </a>
-                  <Link 
-                    href="/contact"
-                    className="block px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors font-medium"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Contact
-                  </Link>
                   <div className="px-4 pt-2">
                     <Button 
                       className="w-full bg-blue-600 text-white hover:bg-blue-700 rounded-full h-11 shadow-xl hover:shadow-2xl transition-all duration-300"

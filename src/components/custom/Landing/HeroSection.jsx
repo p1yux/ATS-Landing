@@ -4,8 +4,11 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Users, Clock, ChartBar, Brain } from 'lucide-react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const HeroSection = () => {
+  const router = useRouter();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -80,7 +83,7 @@ const HeroSection = () => {
             <motion.div variants={itemVariants}>
               <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-violet-50 border border-violet-100">
                 <Brain className="w-4 h-4 mr-2 text-violet-600" />
-                <span className="text-sm font-medium text-violet-600">AI-Powered Recruitment</span>
+                <span className="text-sm font-medium text-violet-600">Smart Recruiting Platform</span>
               </span>
             </motion.div>
 
@@ -93,13 +96,20 @@ const HeroSection = () => {
                 </span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-center lg:text-left">
-                Transform your hiring process with AI-driven automation. Reduce time-to-hire by{' '}
-                <span className="text-violet-600 font-semibold">70%</span> while improving candidate quality through data-driven insights.
+                Streamline your hiring with intelligent automation. Find better candidates{' '}
+                <span className="text-violet-600 font-semibold">3x faster</span> while building meaningful connections through data-driven insights.
               </p>
             </motion.div>
 
             {/* CTA Button */}
-            <motion.div variants={itemVariants} className="flex justify-center lg:justify-start">
+            <motion.div variants={itemVariants} className="flex justify-center lg:justify-start gap-4">
+              <Button 
+                size="lg" 
+                className="h-14 px-12 bg-black text-white rounded-full shadow-xl hover:shadow-2xl hover:bg-gray-800 transition-all duration-300 text-lg font-medium flex items-center gap-3"
+                onClick={() => router.push('/try')}
+              >
+                Let's Try
+              </Button>
               <Button 
                 size="lg" 
                 className="h-14 px-8 bg-violet-600 text-white rounded-full shadow-xl hover:shadow-2xl hover:bg-violet-700 transition-all duration-300 text-lg font-medium flex items-center gap-3"
@@ -115,10 +125,10 @@ const HeroSection = () => {
               className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 pt-4"
             >
               {[
-                { icon: Clock, label: "Time-to-hire", value: "70% Faster" },
-                { icon: Users, label: "Candidate Quality", value: "85% Better" },
-                { icon: CheckCircle, label: "Hire Success", value: "95% Rate" },
-                { icon: ChartBar, label: "Data Insights", value: "100% More" },
+                { icon: Clock, label: "Hiring Speed", value: "3x Faster" },
+                { icon: Users, label: "Response Rate", value: "85% Better" },
+                { icon: CheckCircle, label: "Placement Rate", value: "95% Success" },
+                { icon: ChartBar, label: "Candidate Quality", value: "2x Better" },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -146,7 +156,7 @@ const HeroSection = () => {
           >
             <div className="relative w-full aspect-[4/3] px-4 lg:px-0">
               <Image
-                src="/images/herosection.jpg"
+                src="/images/herosection.jpeg"
                 alt="AI Recruitment Platform"
                 fill
                 className="object-cover rounded-2xl shadow-2xl"

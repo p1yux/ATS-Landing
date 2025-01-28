@@ -17,7 +17,7 @@ export default function Home() {
       <Companies />
       <ATSFor />
       <Pills />
-      <About />
+      {/* <About /> */}
       <FAQ />
       {/* <Testimonials /> */}
       <Footer />

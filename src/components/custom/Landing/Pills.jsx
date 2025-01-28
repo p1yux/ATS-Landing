@@ -69,25 +69,16 @@ const Pills = () => {
       <div className="container mx-auto px-4 relative z-10 max-w-7xl">
         {/* First Part Content */}
         <div className="mb-6 relative">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-600 via-violet-600 to-indigo-600"
-          />
-          <motion.span
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-sm font-semibold text-violet-600 uppercase tracking-wider pl-4 mb-2 block"
-          >
+          <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-600 via-violet-600 to-indigo-600" />
+          <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider pl-4 mb-2 block">
             Our Process
-          </motion.span>
+          </span>
           <div className="flex flex-col md:flex-row md:items-baseline gap-2 pl-4">
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
               className="text-3xl md:text-4xl font-bold relative"
             >
               <span className="bg-gradient-to-r from-blue-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent">
@@ -95,25 +86,12 @@ const Pills = () => {
               </span>
               <span className="relative ml-2 text-gray-900">
                 Perfect Hiring
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: '100%' }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5, duration: 0.8 }}
-                  className="absolute -bottom-2 left-0 h-[0.2em] bg-gradient-to-r from-blue-600/40 via-violet-600/40 to-indigo-600/40 rounded-full"
-                />
               </span>
             </motion.h2>
           </div>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-gray-600 text-base pl-4 mt-3 max-w-2xl"
-          >
+          <p className="text-gray-600 text-base pl-4 mt-3 max-w-2xl">
             Experience our streamlined recruitment process that combines AI intelligence with human expertise
-          </motion.p>
+          </p>
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-8 max-w-full">
@@ -163,16 +141,15 @@ const Pills = () => {
 
           {/* Right Side - Steps */}
           <div className="lg:w-[62%] space-y-3 relative">
-            {/* Vertical Line */}
             <div className="absolute left-[21px] top-[48px] bottom-[48px] w-[2px] bg-gradient-to-b from-blue-200 via-violet-200 to-indigo-200"></div>
             
             {steps.map((step, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: step.delay }}
+                transition={{ duration: 0.5 }}
                 className="flex gap-4 relative group"
               >
                 {/* Step Number */}
@@ -206,25 +183,16 @@ const Pills = () => {
           {/* Second part header - now right aligned */}
           <div className="mb-6 relative flex justify-end">
             <div className="w-full max-w-2xl relative">
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="absolute -right-4 top-0 w-1 h-full bg-gradient-to-b from-blue-600 via-violet-600 to-indigo-600"
-              />
-              <motion.span
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="text-sm font-semibold text-violet-600 uppercase tracking-wider pr-4 mb-2 block text-right"
-              >
+              <div className="absolute -right-4 top-0 w-1 h-full bg-gradient-to-b from-blue-600 via-violet-600 to-indigo-600" />
+              <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider pr-4 mb-2 block text-right">
                 Why Choose Us
-              </motion.span>
+              </span>
               <div className="flex flex-col md:flex-row md:items-baseline gap-2 pr-4 justify-end">
                 <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
                   className="text-3xl md:text-4xl font-bold relative text-right"
                 >
                   <span className="bg-gradient-to-r from-blue-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent">
@@ -232,25 +200,12 @@ const Pills = () => {
                   </span>
                   <span className="relative ml-2 text-gray-900">
                     Hiring Process
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: '100%' }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.5, duration: 0.8 }}
-                      className="absolute -bottom-2 left-0 h-[0.2em] bg-gradient-to-r from-blue-600/40 via-violet-600/40 to-indigo-600/40 rounded-full"
-                    />
                   </span>
                 </motion.h2>
               </div>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="text-gray-600 text-base pr-4 mt-3 text-right"
-              >
+              <p className="text-gray-600 text-base pr-4 mt-3 text-right">
                 Discover how our AI-powered platform revolutionizes recruitment and delivers exceptional results
-              </motion.p>
+              </p>
             </div>
           </div>
 
@@ -259,9 +214,10 @@ const Pills = () => {
             {/* Left Side - Enhanced Content */}
             <div className="lg:w-[55%] space-y-6"> {/* Reduced space-y */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
                 className="prose prose-lg"
               >
                 <p className="text-gray-600 leading-relaxed text-lg font-medium">
@@ -296,9 +252,10 @@ const Pills = () => {
 
                 {/* Enhanced Stats Section - Reduced padding */}
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
                   className="grid grid-cols-3 gap-6 mt-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-100 shadow-lg p-6" /* Reduced padding, gap, and margin */
                 >
                   <div className="text-center">
@@ -396,25 +353,16 @@ const Pills = () => {
         {/* Third Part Content */}
         <div className="mt-20">
           <div className="mb-6 relative">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-600 via-violet-600 to-indigo-600"
-            />
-            <motion.span
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="text-sm font-semibold text-violet-600 uppercase tracking-wider pl-4 mb-2 block"
-            >
+            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-600 via-violet-600 to-indigo-600" />
+            <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider pl-4 mb-2 block">
               Our Workflow
-            </motion.span>
+            </span>
             <div className="flex flex-col md:flex-row md:items-baseline gap-2 pl-4">
               <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
                 className="text-3xl md:text-4xl font-bold relative"
               >
                 <span className="bg-gradient-to-r from-blue-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent">
@@ -422,13 +370,6 @@ const Pills = () => {
                 </span>
                 <span className="relative ml-2 text-gray-900">
                   Recruitment Process
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: '100%' }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.8 }}
-                    className="absolute -bottom-2 left-0 h-[0.2em] bg-gradient-to-r from-blue-600/40 via-violet-600/40 to-indigo-600/40 rounded-full"
-                  />
                 </span>
               </motion.h2>
             </div>
@@ -496,9 +437,10 @@ const Pills = () => {
             {/* Right Side - Content */}
             <div className="lg:w-[55%] space-y-6">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
                 className="prose prose-lg"
               >
                 <p className="text-gray-600 leading-relaxed text-lg">
