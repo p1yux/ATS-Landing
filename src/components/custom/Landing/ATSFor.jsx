@@ -12,7 +12,7 @@ const features = [
     icon: Clock,
     color: "text-blue-600",
     bgColor: "bg-blue-50",
-    image: "/images/img2.jpg"
+    image: "/images/temp1.jpeg"
   },
   {
     id: 'ai-scoring',
@@ -21,7 +21,7 @@ const features = [
     icon: Brain,
     color: "text-violet-600",
     bgColor: "bg-violet-50",
-    image: "/images/img3.jpg"
+    image: "/images/img2.jpg"
   },
   {
     id: 'automation',
@@ -30,7 +30,7 @@ const features = [
     icon: CheckCircle,
     color: "text-indigo-600",
     bgColor: "bg-indigo-50",
-    image: "/images/img4.jpg"
+    image: "/images/temp2.jpeg"
   },
   {
     id: 'engagement',

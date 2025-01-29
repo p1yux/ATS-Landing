@@ -103,16 +103,10 @@ const HeroSection = () => {
 
             {/* CTA Button */}
             <motion.div variants={itemVariants} className="flex justify-center lg:justify-start gap-4">
-              {/* <Button 
-                size="lg" 
-                className="h-14 px-12 bg-black text-white rounded-full shadow-xl hover:shadow-2xl hover:bg-gray-800 transition-all duration-300 text-lg font-medium flex items-center gap-3"
-                onClick={() => router.push('/try')}
-              >
-                Let's Try
-              </Button> */}
               <Button 
                 size="lg" 
                 className="h-14 px-8 bg-[#4146B5] hover:bg-[#363994] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 text-lg font-medium flex items-center gap-3"
+                onClick={() => window.open('https://calendly.com/aryanjainak/30min', '_blank')}
               >
                 Book a Demo
                 <ArrowRight className="w-5 h-5" />

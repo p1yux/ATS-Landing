@@ -109,7 +109,7 @@ const Pills = () => {
               {/* Image Container */}
               <div className="relative rounded-[40%_60%_70%_30%/40%_40%_60%_50%] overflow-hidden shadow-2xl transform -rotate-6 hover:rotate-0 transition-transform duration-500">
                 <Image
-                  src="/images/img5.jpg"
+                  src="/images/img5.jpeg"
                   alt="AI Hiring System Dashboard"
                   width={600}
                   height={450}

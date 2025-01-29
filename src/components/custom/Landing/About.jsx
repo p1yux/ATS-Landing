@@ -123,6 +123,7 @@ const About = () => {
                 <Button 
                   size="lg"
                   className="group bg-gradient-to-r from-[#4146B5] to-[#363994] hover:from-[#363994] hover:to-[#2D307D] text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={() => window.open('https://calendly.com/aryanjainak/30min', '_blank')}
                 >
                   Learn more about us
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

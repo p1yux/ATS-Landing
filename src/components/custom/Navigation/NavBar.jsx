@@ -109,6 +109,7 @@ const NavBar = () => {
               </a>
               <Button 
                 className="bg-[#4146B5] text-white hover:bg-[#363994] rounded-full px-6 h-11 shadow-xl hover:shadow-2xl transition-all duration-300"
+                onClick={() => window.open('https://calendly.com/aryanjainak/30min', '_blank')}
               >
                 Schedule Demo
               </Button>
@@ -162,7 +163,10 @@ const NavBar = () => {
                   <div className="px-4 pt-2">
                     <Button 
                       className="w-full bg-[#4146B5] text-white hover:bg-[#363994] rounded-full h-11 shadow-xl hover:shadow-2xl transition-all duration-300"
-                      onClick={() => setMobileMenuOpen(false)}
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        window.open('https://calendly.com/aryanjainak/30min', '_blank');
+                      }}
                     >
                       Schedule Demo
                     </Button>

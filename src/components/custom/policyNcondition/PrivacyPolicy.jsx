@@ -1,12 +1,59 @@
 "use client";
-import React from 'react';
+import React, { useEffect } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const PrivacyPolicy = () => {
+  const pathname = usePathname();
+  const router = useRouter();
+
+  useEffect(() => {
+    // This ensures the page scrolls to top when mounted
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  // Handle section navigation
+  const handleSectionNavigation = (sectionId) => {
+    // First navigate to home page
+    router.push('/');
+    
+    // After navigation, scroll to the section
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
+  // Add this to your component's scope to handle navigation clicks
+  useEffect(() => {
+    const handleNavClick = (e) => {
+      const target = e.target.closest('a');
+      if (target) {
+        const href = target.getAttribute('href');
+        if (href?.startsWith('#')) {
+          e.preventDefault();
+          const sectionId = href.substring(1);
+          handleSectionNavigation(sectionId);
+        }
+      }
+    };
+
+    // Add event listener
+    document.addEventListener('click', handleNavClick);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('click', handleNavClick);
+    };
+  }, [router]);
+
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-gray-50 pt-24 pb-8">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="bg-white rounded-lg shadow-md p-4 lg:p-8">
-          <h1 className="text-2xl lg:text-3xl font-bold mb-6 text-center">Privacy Policy</h1>
+          <h1 className="text-3xl lg:text-4xl font-extrabold mb-6 text-center text-gray-900">Privacy Policy</h1>
           <div className="space-y-4 text-sm lg:text-base">
             <div className="mb-8">
               <p className="font-bold text-gray-900 mb-4">PRIVACY NOTICE</p>

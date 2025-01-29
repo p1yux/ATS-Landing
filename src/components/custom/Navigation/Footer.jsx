@@ -58,9 +58,7 @@ const Footer = () => {
           <div>
             <h3 className="text-gray-900 font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-gray-600 hover:text-[#4146B5] text-sm">About</Link></li>
               <li><Link href="#" className="text-gray-600 hover:text-[#4146B5] text-sm">Careers</Link></li>
-              <li><Link href="/contact" className="text-gray-600 hover:text-[#4146B5] text-sm">Contact</Link></li>
               <li><Link href="#" className="text-gray-600 hover:text-[#4146B5] text-sm">Blog</Link></li>
             </ul>
           </div>
@@ -96,7 +94,6 @@ const Footer = () => {
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy-policy" className="text-gray-600 hover:text-[#4146B5] text-sm">Privacy Policy</Link>
               <Link href="/termsNcondition" className="text-gray-600 hover:text-[#4146B5] text-sm">Terms & Conditions</Link>
-              <Link href="#" className="text-gray-600 hover:text-[#4146B5] text-sm">Cookie Policy</Link>
             </div>
           </div>
         </div>

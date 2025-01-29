@@ -1,11 +1,64 @@
-import React from 'react';
+"use client";
+import React, { useEffect } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const Terms = () => {
+  const pathname = usePathname();
+  const router = useRouter();
+  const [lastUpdated, setLastUpdated] = React.useState('');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  useEffect(() => {
+    // Set the date on the client side
+    setLastUpdated(new Date().toLocaleDateString());
+  }, []);
+
+  // Handle section navigation
+  const handleSectionNavigation = (sectionId) => {
+    // First navigate to home page
+    router.push('/');
+    
+    // After navigation, scroll to the section
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
+  // Add this to your component's scope to handle navigation clicks
+  useEffect(() => {
+    const handleNavClick = (e) => {
+      const target = e.target.closest('a');
+      if (target) {
+        const href = target.getAttribute('href');
+        if (href?.startsWith('#')) {
+          e.preventDefault();
+          const sectionId = href.substring(1);
+          handleSectionNavigation(sectionId);
+        }
+      }
+    };
+
+    // Add event listener
+    document.addEventListener('click', handleNavClick);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('click', handleNavClick);
+    };
+  }, [router]);
+
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-gray-50 pb-8">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="bg-white rounded-lg shadow-md p-4 lg:p-8">
-          <h1 className="text-2xl lg:text-3xl font-extrabold text-gray-900 dark:text-gray-100 mb-6 text-center">
+          <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-6 text-center">
             Terms and Conditions
           </h1>
           <div className="space-y-4 text-sm lg:text-base">
@@ -115,7 +168,7 @@ const Terms = () => {
 
                 <div className="mt-8">
                   <p className="text-sm text-gray-500">
-                    Last updated: {new Date().toLocaleDateString()}
+                    Last updated: {lastUpdated}
                   </p>
                 </div>
               </div>
