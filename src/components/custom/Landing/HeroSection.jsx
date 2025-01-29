@@ -91,7 +91,7 @@ const HeroSection = () => {
             <motion.div variants={itemVariants} className="space-y-4 lg:space-y-6">
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-center lg:text-left">
                 <span className="text-gray-900">Revolutionize Your</span>{' '}
-                <span className="bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#4146B5] via-[#4F54C9] to-[#5C61DD] bg-clip-text text-transparent">
                   Recruitment
                 </span>
               </h1>
@@ -112,7 +112,7 @@ const HeroSection = () => {
               </Button>
               <Button 
                 size="lg" 
-                className="h-14 px-8 bg-violet-600 text-white rounded-full shadow-xl hover:shadow-2xl hover:bg-violet-700 transition-all duration-300 text-lg font-medium flex items-center gap-3"
+                className="h-14 px-8 bg-[#4146B5] hover:bg-[#363994] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 text-lg font-medium flex items-center gap-3"
               >
                 Book a Demo
                 <ArrowRight className="w-5 h-5" />

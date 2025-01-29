@@ -80,7 +80,7 @@ const NavBar = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo and Brand */}
             <Link href="/" className="flex items-center">
-              <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
+              <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-[#4146B5] via-[#4F54C9] to-[#5C61DD] bg-clip-text text-transparent">
                 Hiremode
               </span>
             </Link>
@@ -89,26 +89,26 @@ const NavBar = () => {
             <div className="hidden md:flex items-center space-x-8">
               <Link 
                 href="/"
-                className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+                className="text-gray-600 hover:text-[#4146B5] transition-colors font-medium"
               >
                 Home
               </Link>
               <a 
                 href="#about"
                 onClick={(e) => handleNavClick(e, 'about')}
-                className="text-gray-600 hover:text-blue-600 transition-colors font-medium cursor-pointer"
+                className="text-gray-600 hover:text-[#4146B5] transition-colors font-medium cursor-pointer"
               >
                 About
               </a>
               <a 
                 href="#faq"
                 onClick={(e) => handleNavClick(e, 'faq')}
-                className="text-gray-600 hover:text-blue-600 transition-colors font-medium cursor-pointer"
+                className="text-gray-600 hover:text-[#4146B5] transition-colors font-medium cursor-pointer"
               >
                 FAQ
               </a>
               <Button 
-                className="bg-blue-600 text-white hover:bg-blue-700 rounded-full px-6 h-11 shadow-xl hover:shadow-2xl transition-all duration-300"
+                className="bg-[#4146B5] text-white hover:bg-[#363994] rounded-full px-6 h-11 shadow-xl hover:shadow-2xl transition-all duration-300"
               >
                 Schedule Demo
               </Button>
@@ -140,7 +140,7 @@ const NavBar = () => {
                 <div className="py-4 space-y-4">
                   <Link 
                     href="/"
-                    className="block px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors font-medium"
+                    className="block px-4 py-2 text-gray-600 hover:text-[#4146B5] transition-colors font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Home
@@ -148,20 +148,20 @@ const NavBar = () => {
                   <a 
                     href="#about"
                     onClick={(e) => handleNavClick(e, 'about')}
-                    className="block px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors font-medium"
+                    className="block px-4 py-2 text-gray-600 hover:text-[#4146B5] transition-colors font-medium"
                   >
                     About
                   </a>
                   <a 
                     href="#faq"
                     onClick={(e) => handleNavClick(e, 'faq')}
-                    className="block px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors font-medium"
+                    className="block px-4 py-2 text-gray-600 hover:text-[#4146B5] transition-colors font-medium"
                   >
                     FAQ
                   </a>
                   <div className="px-4 pt-2">
                     <Button 
-                      className="w-full bg-blue-600 text-white hover:bg-blue-700 rounded-full h-11 shadow-xl hover:shadow-2xl transition-all duration-300"
+                      className="w-full bg-[#4146B5] text-white hover:bg-[#363994] rounded-full h-11 shadow-xl hover:shadow-2xl transition-all duration-300"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Schedule Demo

@@ -35,9 +35,9 @@ const About = () => {
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-display font-bold mb-3"
             >
-              <span className="text-blue-600">Reimagining</span>{' '}
+              <span className="text-[#4146B5]">Reimagining</span>{' '}
               <span className="text-gray-900">recruitment</span>{' '}
-              <span className="text-blue-600">for the</span>{' '}
+              <span className="text-[#4146B5]">for the</span>{' '}
               <span className="text-gray-900">modern era</span>
             </motion.h2>
             <motion.p 
@@ -122,7 +122,7 @@ const About = () => {
 
                 <Button 
                   size="lg"
-                  className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="group bg-gradient-to-r from-[#4146B5] to-[#363994] hover:from-[#363994] hover:to-[#2D307D] text-white shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   Learn more about us
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

@@ -69,7 +69,7 @@ const Pills = () => {
       <div className="container mx-auto px-4 relative z-10 max-w-7xl">
         {/* First Part Content */}
         <div className="mb-6 relative">
-          <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-600 via-violet-600 to-indigo-600" />
+          <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-[#4146B5] via-[#4F54C9] to-[#5C61DD]" />
           <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider pl-4 mb-2 block">
             Our Process
           </span>
@@ -81,7 +81,7 @@ const Pills = () => {
               transition={{ duration: 0.5 }}
               className="text-3xl md:text-4xl font-bold relative"
             >
-              <span className="bg-gradient-to-r from-blue-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#4146B5] via-[#4F54C9] to-[#5C61DD] bg-clip-text text-transparent">
                 Three Steps to
               </span>
               <span className="relative ml-2 text-gray-900">
@@ -183,7 +183,7 @@ const Pills = () => {
           {/* Second part header - now right aligned */}
           <div className="mb-6 relative flex justify-end">
             <div className="w-full max-w-2xl relative">
-              <div className="absolute -right-4 top-0 w-1 h-full bg-gradient-to-b from-blue-600 via-violet-600 to-indigo-600" />
+              <div className="absolute -right-4 top-0 w-1 h-full bg-gradient-to-b from-[#4146B5] via-[#4F54C9] to-[#5C61DD]" />
               <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider pr-4 mb-2 block text-right">
                 Why Choose Us
               </span>
@@ -195,7 +195,7 @@ const Pills = () => {
                   transition={{ duration: 0.5 }}
                   className="text-3xl md:text-4xl font-bold relative text-right"
                 >
-                  <span className="bg-gradient-to-r from-blue-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#4146B5] via-[#4F54C9] to-[#5C61DD] bg-clip-text text-transparent">
                     Transform Your
                   </span>
                   <span className="relative ml-2 text-gray-900">
@@ -353,7 +353,7 @@ const Pills = () => {
         {/* Third Part Content */}
         <div className="mt-20">
           <div className="mb-6 relative">
-            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-600 via-violet-600 to-indigo-600" />
+            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-[#4146B5] via-[#4F54C9] to-[#5C61DD]" />
             <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider pl-4 mb-2 block">
               Our Workflow
             </span>
@@ -365,7 +365,7 @@ const Pills = () => {
                 transition={{ duration: 0.5 }}
                 className="text-3xl md:text-4xl font-bold relative"
               >
-                <span className="bg-gradient-to-r from-blue-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#4146B5] via-[#4F54C9] to-[#5C61DD] bg-clip-text text-transparent">
                   Streamlined
                 </span>
                 <span className="relative ml-2 text-gray-900">
