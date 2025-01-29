@@ -3,82 +3,101 @@ import React from 'react';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            Privacy Policy
-          </h1>
-          <p className="text-gray-600">
-            Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
-          </p>
-        </div>
+    <div className="min-h-screen bg-gray-50 py-8">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="bg-white rounded-lg shadow-md p-4 lg:p-8">
+          <h1 className="text-2xl lg:text-3xl font-bold mb-6 text-center">Privacy Policy</h1>
+          <div className="space-y-4 text-sm lg:text-base">
+            <div className="mb-8">
+              <p className="font-bold text-gray-900 mb-4">PRIVACY NOTICE</p>
+              <p className="text-gray-800 mb-4">Last updated {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+            </div>
 
-        {/* Content Section */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-10">
-          <div className="space-y-12">
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">1. Introduction</h2>
-              <p className="text-gray-700 leading-relaxed">
-                At Hiremode, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, 
-                and safeguard your information when you use our AI-powered recruitment platform. We are committed to 
-                protecting your personal information and ensuring transparency in our data practices.
+            {/* Introduction */}
+            <div className="prose max-w-none text-gray-800">
+              <p className="mb-8">
+                Thank you for choosing to be part of our community at Hiremode ("we", "us", or "our"). 
+                We are committed to protecting your personal information and your right to privacy. If you have any 
+                questions or concerns about our notice, or our practices with regards to your personal information, 
+                please contact us at privacy@hiremode.com.
               </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">2. Information We Collect</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                We collect information that you provide directly to us, including:
+              
+              <p className="mb-8">
+                When you visit our website https://hiremode.com, and use our services, you trust us with your 
+                personal information. We take your privacy very seriously. In this privacy notice, we seek to explain 
+                to you in the clearest way possible what information we collect, how we use it and what rights you 
+                have in relation to it.
               </p>
-              <ul className="list-disc ml-8 space-y-3 text-gray-700">
-                <li className="pl-2">Name and contact information</li>
-                <li className="pl-2">Professional experience and qualifications</li>
-                <li className="pl-2">Resume/CV content</li>
-                <li className="pl-2">Communication preferences</li>
-              </ul>
-            </section>
 
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">3. How We Use Your Information</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                We use the collected information to:
+              <p className="mb-8 font-bold text-gray-900">
+                Please read this privacy notice carefully as it will help you make informed decisions about sharing 
+                your personal information with us.
               </p>
-              <ul className="list-disc ml-8 space-y-3 text-gray-700">
-                <li className="pl-2">Provide and improve our services</li>
-                <li className="pl-2">Match candidates with job opportunities</li>
-                <li className="pl-2">Communicate about services and updates</li>
-                <li className="pl-2">Ensure platform security</li>
-              </ul>
-            </section>
 
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">4. Contact Us</h2>
-              <div className="bg-gray-50 rounded-xl p-6">
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  If you have any questions about this Privacy Policy, please contact us at:
-                </p>
-                <div className="space-y-2">
-                  <p className="text-gray-700">
-                    <span className="font-medium">Email:</span>{' '}
-                    <a href="mailto:privacy@hiremode.ai" className="text-blue-600 hover:text-blue-700">
-                      privacy@hiremode.ai
-                    </a>
-                  </p>
-                  <p className="text-gray-700">
-                    <span className="font-medium">Address:</span> 123 Business Avenue, Suite 100, San Francisco, CA 94107
-                  </p>
-                </div>
+              {/* Table of Contents */}
+              <div className="mb-12">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">TABLE OF CONTENTS</h2>
+                <ol className="list-decimal list-inside space-y-3 text-gray-800">
+                  <li>WHAT INFORMATION DO WE COLLECT?</li>
+                  <li>HOW DO WE USE YOUR INFORMATION?</li>
+                  <li>WILL YOUR INFORMATION BE SHARED WITH ANYONE?</li>
+                  <li>DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</li>
+                  <li>HOW LONG DO WE KEEP YOUR INFORMATION?</li>
+                  <li>HOW DO WE KEEP YOUR INFORMATION SAFE?</li>
+                  <li>DO WE COLLECT INFORMATION FROM MINORS?</li>
+                  <li>WHAT ARE YOUR PRIVACY RIGHTS?</li>
+                  <li>CONTROLS FOR DO-NOT-TRACK FEATURES</li>
+                  <li>DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</li>
+                  <li>DO WE MAKE UPDATES TO THIS POLICY?</li>
+                  <li>HOW CAN YOU REQUEST YOUR DATA TO BE DELETED?</li>
+                  <li>HOW CAN YOU CONTACT US ABOUT THIS POLICY?</li>
+                  <li>VULNERABILITY DISCLOSURE</li>
+                </ol>
               </div>
-            </section>
+
+              {/* Sections */}
+              <section className="mb-12">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">1. WHAT INFORMATION DO WE COLLECT?</h2>
+                <p className="font-bold text-gray-900 mb-2">Information automatically collected</p>
+                <p className="italic text-gray-800 mb-4">In Short: Some information — such as IP address and/or browser and device characteristics — is collected automatically when you visit our Services.</p>
+                <p className="text-gray-800">
+                  We automatically collect certain information when you visit, use or navigate the Services. 
+                  This information does not reveal your specific identity (like your name or contact information) 
+                  but may include device and usage information, such as your IP address, browser and device 
+                  characteristics, operating system, language preferences, referring URLs, device name, country, 
+                  location, information about how and when you use our Services and other technical information.
+                </p>
+              </section>
+
+              <section className="mb-12">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">2. HOW DO WE USE YOUR INFORMATION?</h2>
+                <p className="italic text-gray-800 mb-4">In Short: We process your information for purposes based on legitimate business interests, the fulfillment of our contract with you, compliance with our legal obligations, and/or your consent.</p>
+                <p className="text-gray-800">
+                  We use personal information collected via our Services for a variety of business purposes 
+                  described below. We process your personal information for these purposes in reliance on our 
+                  legitimate business interests, in order to enter into or perform a contract with you, with your 
+                  consent, and/or for compliance with our legal obligations.
+                </p>
+              </section>
+
+              {/* Contact Section */}
+              <section className="mb-12">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">13. HOW CAN YOU CONTACT US ABOUT THIS POLICY?</h2>
+                <p className="text-gray-800 mb-4">
+                  If you have questions or comments about this policy, you may contact our Data Protection Officer (DPO) 
+                  by email at privacy@hiremode.com, or by post to:
+                </p>
+                <div className="mt-4 text-gray-800">
+                  <p>Hiremode, Inc</p>
+                  <p>Data Protection Officer</p>
+                  <p>123 Business Street</p>
+                  <p>San Francisco, CA 94104</p>
+                  <p>United States</p>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
-
-        {/* Footer Note */}
-        <p className="text-center text-gray-500 text-sm mt-8">
-          This privacy policy is subject to change. We will notify you of any material changes.
-        </p>
       </div>
     </div>
   );
