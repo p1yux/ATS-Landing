@@ -9,15 +9,15 @@ const faqs = [
     answer: "Our AI technology enhances recruitment by automating candidate screening, providing intelligent matching based on skills and experience, and offering predictive analytics for better hiring decisions. This results in faster placements and better candidate matches."
   },
   {
-    question: "What makes Hiremode different from other ATS platforms?",
-    answer: "Hiremode combines advanced AI capabilities with an intuitive user interface, offering features like automated candidate ranking, smart scheduling, and personalized communication workflows. Our platform is designed to be both powerful and easy to use."
+    question: "What makes Hiremod different from other ATS platforms?",
+    answer: "Hiremod combines advanced AI capabilities with an intuitive user interface, offering features like automated candidate ranking, smart scheduling, and personalized communication workflows. Our platform is designed to be both powerful and easy to use."
   },
   {
-    question: "Can I integrate Hiremode with my existing HR tools?",
-    answer: "Yes, Hiremode offers seamless integration with popular HR tools and platforms. Our API-first approach allows for easy connection with your existing tech stack, including HRIS systems, job boards, and calendar applications."
+    question: "Can I integrate Hiremod with my existing HR tools?",
+    answer: "Yes, Hiremod offers seamless integration with popular HR tools and platforms. Our API-first approach allows for easy connection with your existing tech stack, including HRIS systems, job boards, and calendar applications."
   },
   {
-    question: "How secure is my recruitment data with Hiremode?",
+    question: "How secure is my recruitment data with Hiremod?",
     answer: "We prioritize data security with enterprise-grade encryption, regular security audits, and compliance with global data protection regulations including GDPR. Your data is stored in secure, redundant cloud infrastructure."
   },
   {

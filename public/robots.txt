@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://hiremode.com/sitemap.xml 
+Sitemap: https://hiremod.com/sitemap.xml 

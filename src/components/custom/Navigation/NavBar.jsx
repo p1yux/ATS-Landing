@@ -81,7 +81,7 @@ const NavBar = () => {
             {/* Logo and Brand */}
             <Link href="/" className="flex items-center">
               <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-[#4146B5] via-[#4F54C9] to-[#5C61DD] bg-clip-text text-transparent">
-                Hiremode
+                Hiremod
               </span>
             </Link>
 

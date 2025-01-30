@@ -16,26 +16,26 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://hiremode.com'),
+  metadataBase: new URL('https://hiremod.com'),
   title: {
-    default: "Hiremode - Intelligent Talent Platform",
-    template: "%s | Hiremode"
+    default: "Hiremod - Intelligent Talent Platform",
+    template: "%s | Hiremod"
   },
-  description: "Transform your hiring process with smart automation, data-driven insights, and seamless candidate management. Hiremode helps you find better candidates 3x faster.",
+  description: "Transform your hiring process with smart automation, data-driven insights, and seamless candidate management. Hiremod helps you find better candidates 3x faster.",
   keywords: ["recruitment software", "AI recruitment", "hiring platform", "talent acquisition", "ATS", "applicant tracking system", "HR technology"],
-  authors: [{ name: "Hiremode Team" }],
-  creator: "Hiremode",
-  publisher: "Hiremode",
+  authors: [{ name: "Hiremod Team" }],
+  creator: "Hiremod",
+  publisher: "Hiremod",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "Hiremode - Intelligent Talent Platform",
+    title: "Hiremod - Intelligent Talent Platform",
     description: "Transform your hiring process with smart automation, data-driven insights, and seamless candidate management.",
-    url: 'https://hiremode.com',
-    siteName: 'Hiremode',
+    url: 'https://hiremod.com',
+    siteName: 'Hiremod',
     images: [
       {
         url: '/images/og-image.jpg',
@@ -49,10 +49,10 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Hiremode - Intelligent Talent Platform",
+    title: "Hiremod - Intelligent Talent Platform",
     description: "Transform your hiring process with smart automation and data-driven insights.",
     images: ['/images/twitter-image.jpg'],
-    creator: '@hiremode',
+    creator: '@hiremod',
   },
   robots: {
     index: true,
