@@ -108,7 +108,7 @@ const HeroSection = () => {
                 className="h-14 px-8 bg-[#4146B5] hover:bg-[#363994] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 text-lg font-medium flex items-center gap-3"
                 onClick={() => window.open('https://calendly.com/aryanjainak/30min', '_blank')}
               >
-                Book a Demo
+                Get Started For Free
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </motion.div>
