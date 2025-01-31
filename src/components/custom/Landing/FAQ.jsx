@@ -40,9 +40,9 @@ const FAQ = () => {
             viewport={{ once: true }}
             className="flex items-center justify-center gap-3 md:gap-4 mb-3"
           >
-            <div className="h-[1px] w-6 md:w-8 bg-blue-600/30"></div>
-            <span className="text-xs md:text-sm font-medium text-blue-600 uppercase tracking-wider">FAQ</span>
-            <div className="h-[1px] w-6 md:w-8 bg-blue-600/30"></div>
+            <div className="h-[1px] w-6 md:w-8 bg-[#25272A]/30"></div>
+            <span className="text-xs md:text-sm font-medium text-[#25272A] uppercase tracking-wider">FAQ</span>
+            <div className="h-[1px] w-6 md:w-8 bg-[#25272A]/30"></div>
           </motion.div>
           
           <motion.h2
@@ -51,15 +51,15 @@ const FAQ = () => {
             viewport={{ once: true }}
             className="text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-2 md:mb-3"
           >
-            <span className="text-blue-600">Frequently</span>{' '}
-            <span className="text-gray-900">Asked Questions</span>
+            <span className="text-[#25272A]">Frequently</span>{' '}
+            <span className="text-[#25272A]">Asked Questions</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-sm md:text-base text-gray-600 px-4"
+            className="text-sm md:text-base text-[#6B7280] px-4"
           >
             Everything you need to know about our AI-powered recruitment platform
           </motion.p>
@@ -75,15 +75,15 @@ const FAQ = () => {
               transition={{ delay: index * 0.1 }}
               key={index}
               className={`border-b border-gray-200 last:border-0 ${
-                openIndex === index ? 'bg-blue-50/50' : 'hover:bg-gray-50'
+                openIndex === index ? 'bg-[#F8F8F9]/50' : 'hover:bg-[#F8F8F9]'
               } rounded-lg transition-all duration-300`}
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className={`w-full py-3 md:py-4 px-4 md:px-6 flex items-center justify-between gap-3 md:gap-4 text-left transition-all duration-300 ${
                   openIndex === index 
-                    ? 'text-blue-600' 
-                    : 'text-gray-900 hover:text-blue-600'
+                    ? 'text-[#25272A]' 
+                    : 'text-[#25272A] hover:text-[#404348]'
                 }`}
               >
                 <span className="text-sm md:text-base lg:text-lg font-display font-semibold">
@@ -91,8 +91,8 @@ const FAQ = () => {
                 </span>
                 <div className={`flex-shrink-0 p-1 md:p-1.5 rounded-lg transition-all duration-300 ${
                   openIndex === index 
-                    ? 'bg-blue-100 text-blue-600' 
-                    : 'bg-gray-100 text-gray-500'
+                    ? 'bg-[#F8F8F9] text-[#25272A]' 
+                    : 'bg-[#F8F8F9] text-[#6B7280]'
                 }`}>
                   {openIndex === index ? (
                     <Minus className="w-3 h-3 md:w-4 md:h-4" />
@@ -110,7 +110,7 @@ const FAQ = () => {
                     transition={{ duration: 0.2 }}
                     className="overflow-hidden"
                   >
-                    <p className="px-4 md:px-6 pb-3 md:pb-4 text-gray-600 leading-relaxed text-sm md:text-base">
+                    <p className="px-4 md:px-6 pb-3 md:pb-4 text-[#6B7280] leading-relaxed text-sm md:text-base">
                       {faq.answer}
                     </p>
                   </motion.div>

@@ -10,8 +10,8 @@ const features = [
     title: "Launch Your Pipeline Fast",
     description: "Get your hiring process running in minutes with our intuitive setup. Start finding great candidates right away.",
     icon: Clock,
-    color: "text-blue-600",
-    bgColor: "bg-blue-50",
+    color: "text-[#25272A]",
+    bgColor: "bg-[#F8F8F9]",
     image: "/images/temp1.jpeg"
   },
   {
@@ -19,8 +19,8 @@ const features = [
     title: "Smart Candidate Matching",
     description: "Our intelligent system automatically evaluates candidates based on your specific requirements, ensuring perfect matches every time.",
     icon: Brain,
-    color: "text-violet-600",
-    bgColor: "bg-violet-50",
+    color: "text-[#25272A]",
+    bgColor: "bg-[#F8F8F9]",
     image: "/images/img2.jpg"
   },
   {
@@ -28,8 +28,8 @@ const features = [
     title: "Automated Follow-ups",
     description: "Keep your talent pipeline warm with personalized, timely communications. Build meaningful connections with every candidate.",
     icon: CheckCircle,
-    color: "text-indigo-600",
-    bgColor: "bg-indigo-50",
+    color: "text-[#25272A]",
+    bgColor: "bg-[#F8F8F9]",
     image: "/images/temp2.jpeg"
   },
   {
@@ -37,8 +37,8 @@ const features = [
     title: "Boost Response Rates",
     description: "Increase candidate engagement through personalized outreach and perfectly-timed communications.",
     icon: Zap,
-    color: "text-amber-600",
-    bgColor: "bg-amber-50",
+    color: "text-[#25272A]",
+    bgColor: "bg-[#F8F8F9]",
     image: "/images/img6.jpg"
   }
 ];
@@ -48,22 +48,16 @@ const ATSFor = () => {
   const activeFeatureData = features.find(f => f.id === activeFeature);
 
   return (
-    <section className="py-8 lg:py-16 w-full flex items-center justify-center relative overflow-hidden">
+    <section className="py-8 lg:py-16 w-full flex items-center justify-center relative overflow-hidden bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header - Removed animations */}
         <div className="text-center max-w-4xl mx-auto mb-8">
-          <span className="inline-block px-4 py-1.5 mb-3 text-sm font-medium bg-gradient-to-r from-violet-600/10 to-blue-600/10 text-violet-600 rounded-full">
+          <span className="inline-block px-4 py-1.5 mb-3 text-sm font-medium bg-[#F8F8F9] text-[#25272A] rounded-full">
             Features & Capabilities
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight">
-            <span className="bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="text-[#25272A]">
               The Talent Intelligence Platform
-            </span>
-            <span className="block text-2xl md:text-3xl text-gray-600 mt-4 font-normal">
-              that want to{' '}
-              <span className="relative inline-block">
-                scale faster
-              </span>
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -79,10 +73,10 @@ const ATSFor = () => {
               <button
                 key={feature.id}
                 onClick={() => setActiveFeature(feature.id)}
-                className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${
+                className={`w-full text-left p-4 rounded-lg transition-all duration-300 ${
                   activeFeature === feature.id 
-                    ? `${feature.bgColor} shadow-sm border border-${feature.color}/20` 
-                    : 'hover:bg-gray-50'
+                    ? 'bg-[#F8F8F9] shadow-sm border border-[#E5E7EB]' 
+                    : 'hover:bg-[#F8F8F9]'
                 }`}
               >
                 <div className="flex items-start gap-3">

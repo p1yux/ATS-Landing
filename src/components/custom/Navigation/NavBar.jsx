@@ -70,17 +70,17 @@ const NavBar = () => {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`max-w-[83rem] w-full rounded-xl transition-all duration-300 ${
+        className={`max-w-[83rem] w-full rounded-lg transition-all duration-300 ${
           scrolled 
-            ? 'bg-white/90 shadow-lg border border-gray-200/50 backdrop-blur-lg' 
-            : 'bg-white/80 shadow-md backdrop-blur-md hover:shadow-lg'
+            ? 'bg-white shadow-sm border border-gray-100' 
+            : 'bg-white'
         }`}
       >
         <div className="px-4 lg:px-6">
           <div className="flex items-center justify-between h-16">
             {/* Logo and Brand */}
             <Link href="/" className="flex items-center">
-              <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-[#4146B5] via-[#4F54C9] to-[#5C61DD] bg-clip-text text-transparent">
+              <span className="text-xl md:text-2xl font-bold text-[#25272A]">
                 Hiremod
               </span>
             </Link>
@@ -89,41 +89,41 @@ const NavBar = () => {
             <div className="hidden md:flex items-center space-x-8">
               <Link 
                 href="/"
-                className="text-gray-600 hover:text-[#4146B5] transition-colors font-medium"
+                className="text-[#6B7280] hover:text-[#25272A] transition-colors font-medium"
               >
                 Home
               </Link>
               <a 
                 href="#about"
                 onClick={(e) => handleNavClick(e, 'about')}
-                className="text-gray-600 hover:text-[#4146B5] transition-colors font-medium cursor-pointer"
+                className="text-[#6B7280] hover:text-[#25272A] transition-colors font-medium cursor-pointer"
               >
                 About
               </a>
               <a 
                 href="#faq"
                 onClick={(e) => handleNavClick(e, 'faq')}
-                className="text-gray-600 hover:text-[#4146B5] transition-colors font-medium cursor-pointer"
+                className="text-[#6B7280] hover:text-[#25272A] transition-colors font-medium cursor-pointer"
               >
                 FAQ
               </a>
               <Button 
-                className="bg-[#4146B5] text-white hover:bg-[#363994] rounded-full px-6 h-11 shadow-xl hover:shadow-2xl transition-all duration-300"
+                className="bg-[#25272A] text-white hover:bg-[#404348] rounded-lg px-6 h-11 shadow-sm transition-all duration-300"
                 onClick={() => window.open('https://calendly.com/aryanjainak/30min', '_blank')}
               >
-                Schedule Demo
+                Book a Demo
               </Button>
             </div>
 
             {/* Mobile Menu Button */}
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+              className="md:hidden p-2 rounded-lg bg-[#F8F8F9] hover:bg-[#E5E7EB] transition-colors"
             >
               {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-gray-600" />
+                <X className="w-6 h-6 text-[#25272A]" />
               ) : (
-                <Menu className="w-6 h-6 text-gray-600" />
+                <Menu className="w-6 h-6 text-[#25272A]" />
               )}
             </button>
           </div>
@@ -141,7 +141,7 @@ const NavBar = () => {
                 <div className="py-4 space-y-4">
                   <Link 
                     href="/"
-                    className="block px-4 py-2 text-gray-600 hover:text-[#4146B5] transition-colors font-medium"
+                    className="block px-4 py-2 text-[#6B7280] hover:text-[#25272A] transition-colors font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Home
@@ -149,26 +149,26 @@ const NavBar = () => {
                   <a 
                     href="#about"
                     onClick={(e) => handleNavClick(e, 'about')}
-                    className="block px-4 py-2 text-gray-600 hover:text-[#4146B5] transition-colors font-medium"
+                    className="block px-4 py-2 text-[#6B7280] hover:text-[#25272A] transition-colors font-medium"
                   >
                     About
                   </a>
                   <a 
                     href="#faq"
                     onClick={(e) => handleNavClick(e, 'faq')}
-                    className="block px-4 py-2 text-gray-600 hover:text-[#4146B5] transition-colors font-medium"
+                    className="block px-4 py-2 text-[#6B7280] hover:text-[#25272A] transition-colors font-medium"
                   >
                     FAQ
                   </a>
                   <div className="px-4 pt-2">
                     <Button 
-                      className="w-full bg-[#4146B5] text-white hover:bg-[#363994] rounded-full h-11 shadow-xl hover:shadow-2xl transition-all duration-300"
+                      className="w-full bg-[#25272A] text-white hover:bg-[#404348] rounded-full h-11 shadow-sm transition-all duration-300"
                       onClick={() => {
                         setMobileMenuOpen(false);
                         window.open('https://calendly.com/aryanjainak/30min', '_blank');
                       }}
                     >
-                      Schedule Demo
+                      Get Started
                     </Button>
                   </div>
                 </div>

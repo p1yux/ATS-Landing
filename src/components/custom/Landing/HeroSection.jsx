@@ -33,7 +33,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen w-full flex items-center bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+    <section className="relative min-h-screen w-full flex items-center bg-white overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <motion.div
@@ -50,7 +50,7 @@ const HeroSection = () => {
             scale: [1.1, 1, 1.1],
           }}
           transition={{ duration: 10, repeat: Infinity }}
-          className="absolute bottom-40 left-20 w-72 h-72 bg-blue-400/20 rounded-full filter blur-[80px]"
+          className="absolute bottom-40 left-20 w-72 h-72 bg-[#F8F8F9]/20 rounded-full filter blur-[80px]"
         />
         <motion.div
           animate={{
@@ -81,23 +81,21 @@ const HeroSection = () => {
           >
             {/* Badge */}
             <motion.div variants={itemVariants}>
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-violet-50 border border-violet-100">
-                <Brain className="w-4 h-4 mr-2 text-violet-600" />
-                <span className="text-sm font-medium text-violet-600">Smart Recruiting Platform</span>
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#F8F8F9] border border-[#E5E7EB]">
+                <Brain className="w-4 h-4 mr-2 text-[#25272A]" />
+                <span className="text-sm font-medium text-[#25272A]">Smart Recruiting Platform</span>
               </span>
             </motion.div>
 
             {/* Headline */}
             <motion.div variants={itemVariants} className="space-y-4 lg:space-y-6">
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-center lg:text-left">
-                <span className="text-gray-900">Revolutionize Your</span>{' '}
-                <span className="bg-gradient-to-r from-[#4146B5] via-[#4F54C9] to-[#5C61DD] bg-clip-text text-transparent">
-                  Recruitment
-                </span>
+                <span className="text-[#25272A]">Revolutionize Your</span>{' '}
+                <span className="text-[#25272A]">Recruitment</span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-center lg:text-left">
                 Streamline your hiring with intelligent automation. Find better candidates{' '}
-                <span className="text-violet-600 font-semibold">3x faster</span> while building meaningful connections through data-driven insights.
+                <span className="text-[#25272A] font-semibold">3x faster</span> while building meaningful connections through data-driven insights.
               </p>
             </motion.div>
 
@@ -105,7 +103,7 @@ const HeroSection = () => {
             <motion.div variants={itemVariants} className="flex justify-center lg:justify-start gap-4">
               <Button 
                 size="lg" 
-                className="h-14 px-8 bg-[#4146B5] hover:bg-[#363994] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 text-lg font-medium flex items-center gap-3"
+                className="h-14 px-8 bg-[#25272A] hover:bg-[#404348] text-white rounded-lg shadow-sm transition-all duration-300 text-lg font-medium flex items-center gap-3"
                 onClick={() => window.open('https://hiremode-ats.vercel.app', '_blank')}
               >
                 Get Started For Free
@@ -129,12 +127,12 @@ const HeroSection = () => {
                   whileHover={{ y: -4 }}
                   className="flex items-start space-x-3 p-4 rounded-xl bg-white/60 backdrop-blur-sm border border-gray-100 hover:shadow-md transition-all duration-300"
                 >
-                  <div className="p-2 rounded-lg bg-violet-50">
-                    <stat.icon className="w-5 h-5 text-violet-600" />
+                  <div className="p-2 rounded-lg bg-[#F8F8F9]">
+                    <stat.icon className="w-5 h-5 text-[#25272A]" />
                   </div>
                   <div>
-                    <p className="font-semibold text-violet-600">{stat.value}</p>
-                    <p className="text-sm text-gray-600">{stat.label}</p>
+                    <p className="font-semibold text-[#25272A]">{stat.value}</p>
+                    <p className="text-sm text-[#6B7280]">{stat.label}</p>
                   </div>
                 </motion.div>
               ))}
@@ -167,8 +165,8 @@ const HeroSection = () => {
                 className="absolute -top-6 -right-6 p-4 rounded-xl bg-white shadow-lg border border-gray-100"
               >
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center">
-                    <Users className="w-5 h-5 text-violet-600" />
+                  <div className="w-10 h-10 rounded-full bg-[#F8F8F9] flex items-center justify-center">
+                    <Users className="w-5 h-5 text-[#25272A]" />
                   </div>
                   <div className="space-y-1">
                     <div className="text-sm font-medium text-gray-900">New Match</div>
@@ -180,9 +178,9 @@ const HeroSection = () => {
               <motion.div
                 animate={{ y: [10, -10, 10] }}
                 transition={{ duration: 4, repeat: Infinity }}
-                className="absolute -bottom-6 -left-6 p-3 rounded-xl bg-violet-50 shadow-lg"
+                className="absolute -bottom-6 -left-6 p-3 rounded-xl bg-[#F8F8F9] shadow-lg"
               >
-                <CheckCircle className="w-6 h-6 text-violet-600" />
+                <CheckCircle className="w-6 h-6 text-[#25272A]" />
               </motion.div>
             </div>
           </motion.div>

@@ -16,7 +16,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-4">
             <span className="inline-block">
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#4146B5] to-[#4F54C9] bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-[#25262f] to-[#0d0d19] bg-clip-text text-transparent">
                 Hiremod
               </span>
             </span>

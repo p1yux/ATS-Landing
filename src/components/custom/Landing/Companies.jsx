@@ -74,65 +74,55 @@ const Companies = () => {
   ];
 
   return (
-    <section className="py-8 bg-white relative overflow-hidden">
-      {/* Gradient Overlays for smooth fade effect */}
-      <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-white to-transparent z-10"></div>
-      <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-white to-transparent z-10"></div>
+    <section className="py-12 bg-[#F8F8F9] relative overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold text-[#25272A] mb-2">
+            Teams hiring with Hiremod
+          </h2>
+          <p className="text-[#6B7280]">
+            Join hundreds of companies using Hiremod to transform their hiring
+          </p>
+        </div>
 
-      {/* Section Header */}
-      <div className="text-center mb-8">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-sm font-semibold text-violet-600 uppercase tracking-wider mb-2"
-        >
-          Trusted By Industry Leaders
-        </motion.p>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="text-2xl font-bold text-gray-900"
-        >
-          Empowering Global Enterprises
-        </motion.h2>
-      </div>
+        {/* Scrolling Logos Container */}
+        <div className="relative overflow-hidden">
+          {/* Gradient Overlays for smooth fade effect */}
+          <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-[#F8F8F9] to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-[#F8F8F9] to-transparent z-10"></div>
 
-      {/* Scrolling Logos Container */}
-      <div className="relative max-w-7xl mx-auto px-4">
-        <motion.div
-          initial={{ x: 0 }}
-          animate={{ x: "-50%" }}
-          transition={{
-            duration: 40,
-            repeat: Infinity,
-            ease: "linear",
-            repeatType: "loop"
-          }}
-          style={{ willChange: 'transform' }}
-          className="flex items-center gap-16 whitespace-nowrap"
-        >
-          {companies.map((company, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-75 hover:opacity-100"
-            >
-              <div className="w-32 h-16 relative">
-                <Image
-                  src={company.logo}
-                  alt={`${company.name} logo`}
-                  fill
-                  className="object-contain"
-                  loading="lazy"
-                  quality={75}
-                  sizes="(max-width: 768px) 100vw, 200px"
-                />
+          <motion.div
+            initial={{ x: 0 }}
+            animate={{ x: "-50%" }}
+            transition={{
+              duration: 40,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop"
+            }}
+            style={{ willChange: 'transform' }}
+            className="flex items-center gap-16 w-fit"
+          >
+            {companies.map((company, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-75 hover:opacity-100 shrink-0"
+              >
+                <div className="w-32 h-16 relative">
+                  <Image
+                    src={company.logo}
+                    alt={`${company.name} logo`}
+                    fill
+                    className="object-contain"
+                    loading="lazy"
+                    quality={75}
+                    sizes="(max-width: 768px) 100vw, 200px"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
-        </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );
