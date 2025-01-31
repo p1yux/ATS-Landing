@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://hiremod.com'),
+  metadataBase: new URL('https://hiremod.io'),
   title: {
     default: "Hiremod - Intelligent Talent Platform",
     template: "%s | Hiremod"
@@ -34,7 +34,7 @@ export const metadata = {
   openGraph: {
     title: "Hiremod - Intelligent Talent Platform",
     description: "Transform your hiring process with smart automation, data-driven insights, and seamless candidate management.",
-    url: 'https://hiremod.com',
+    url: 'https://hiremod.io',
     siteName: 'Hiremod',
     images: [
       {
