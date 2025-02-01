@@ -14,19 +14,19 @@ const HeroSection = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 10 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.4,
         ease: "easeOut"
       }
     }
@@ -38,26 +38,23 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <motion.div
           animate={{
-            opacity: [0.3, 0.5, 0.3],
-            scale: [1, 1.1, 1],
+            opacity: [0.3, 0.4, 0.3],
           }}
-          transition={{ duration: 8, repeat: Infinity }}
+          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
           className="absolute top-20 right-10 w-96 h-96 bg-violet-400/20 rounded-full filter blur-[80px]"
         />
         <motion.div
           animate={{
-            opacity: [0.2, 0.4, 0.2],
-            scale: [1.1, 1, 1.1],
+            opacity: [0.2, 0.3, 0.2],
           }}
-          transition={{ duration: 10, repeat: Infinity }}
+          transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
           className="absolute bottom-40 left-20 w-72 h-72 bg-[#F8F8F9]/20 rounded-full filter blur-[80px]"
         />
         <motion.div
           animate={{
-            opacity: [0.1, 0.3, 0.1],
-            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.2, 0.1],
           }}
-          transition={{ duration: 12, repeat: Infinity }}
+          transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
           className="absolute top-40 left-1/3 w-64 h-64 bg-purple-300/20 rounded-full filter blur-[70px]"
         />
         
@@ -104,7 +101,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="h-14 px-8 bg-[#25272A] hover:bg-[#404348] text-white rounded-lg shadow-sm transition-all duration-300 text-lg font-medium flex items-center gap-3"
-                onClick={() => window.open('https://hiremode-ats.vercel.app', '_blank')}
+                onClick={() => window.open('https://calendly.com/aryanjainak/30min', '_blank')}
               >
                 Get Started For Free
                 <ArrowRight className="w-5 h-5" />
@@ -160,8 +157,8 @@ const HeroSection = () => {
               
               {/* Floating UI Elements */}
               <motion.div
-                animate={{ y: [-10, 10, -10] }}
-                transition={{ duration: 4, repeat: Infinity }}
+                animate={{ y: [-5, 5, -5] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
                 className="absolute -top-6 -right-6 p-4 rounded-xl bg-white shadow-lg border border-gray-100"
               >
                 <div className="flex items-center space-x-3">
@@ -176,8 +173,8 @@ const HeroSection = () => {
               </motion.div>
 
               <motion.div
-                animate={{ y: [10, -10, 10] }}
-                transition={{ duration: 4, repeat: Infinity }}
+                animate={{ y: [5, -5, 5] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
                 className="absolute -bottom-6 -left-6 p-3 rounded-xl bg-[#F8F8F9] shadow-lg"
               >
                 <CheckCircle className="w-6 h-6 text-[#25272A]" />
