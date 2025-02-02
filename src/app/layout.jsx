@@ -18,12 +18,23 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata = {
   metadataBase: new URL('https://hiremod.io'),
   title: {
-    default: "Hiremod - Intelligent Talent Platform",
+    default: "Hiremod - AI-Powered Recruitment & Applicant Tracking System",
     template: "%s | Hiremod"
   },
-  description: "Transform your hiring process with smart automation, data-driven insights, and seamless candidate management. Hiremod helps you find better candidates 3x faster.",
-  keywords: ["recruitment software", "AI recruitment", "hiring platform", "talent acquisition", "ATS", "applicant tracking system", "HR technology"],
-  authors: [{ name: "Hiremod Team" }],
+  description: "Hiremod is an intelligent talent platform that streamlines recruitment with AI-powered candidate matching, automated screening, and smart analytics. Find top talent 3x faster.",
+  keywords: [
+    "AI recruitment software",
+    "applicant tracking system",
+    "recruitment automation",
+    "talent acquisition platform",
+    "hiring automation",
+    "candidate matching software",
+    "AI hiring platform",
+    "recruitment CRM",
+    "HR technology",
+    "intelligent recruiting"
+  ],
+  authors: [{ name: "Hiremod" }],
   creator: "Hiremod",
   publisher: "Hiremod",
   formatDetection: {
@@ -32,16 +43,16 @@ export const metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Hiremod - Intelligent Talent Platform",
-    description: "Transform your hiring process with smart automation, data-driven insights, and seamless candidate management.",
+    title: "Hiremod - Hiremod - Intelligent Talent Platform",
+    description: "Transform your hiring process with AI-powered candidate matching, automated screening, and intelligent analytics. Find better candidates 3x faster.",
     url: 'https://hiremod.io',
     siteName: 'Hiremod',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: 'https://hiremod.io/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Hiremode Platform Preview',
+        alt: 'Hiremod AI Recruitment Platform',
       },
     ],
     locale: 'en_US',
@@ -49,9 +60,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Hiremod - Intelligent Talent Platform",
-    description: "Transform your hiring process with smart automation and data-driven insights.",
-    images: ['/images/twitter-image.jpg'],
+    title: "Hiremod - Hiremod - Intelligent Talent Platform",
+    description: "Revolutionize your hiring with AI-powered candidate matching and automated screening. Find top talent 3x faster.",
+    images: ['https://hiremod.io/images/twitter-image.jpg'],
     creator: '@hiremod',
   },
   robots: {
@@ -67,8 +78,6 @@ export const metadata = {
   },
   verification: {
     google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
   },
 };
 
