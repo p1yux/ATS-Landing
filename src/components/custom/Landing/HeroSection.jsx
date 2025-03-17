@@ -67,37 +67,38 @@ const HeroSection = () => {
       </div>
 
       {/* Main Content Container */}
-      <div className="container relative z-10 mx-auto px-4 pt-32 lg:pt-20">
-        <div className="flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto gap-8 lg:gap-16">
-          {/* Left Column - Text Content */}
+      <div className="container relative z-10 mx-auto px-4 pt-50 lg:pt-20">
+        <div className="flex flex-col items-center justify-between max-w-7xl mx-auto gap-8 lg:gap-16">
+          {/* Text Content - Now Centered */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="flex-1 space-y-6 lg:space-y-8 max-w-xl lg:max-w-none lg:pr-8"
+            className="w-full space-y-6 lg:space-y-8 text-center"
           >
             {/* Badge */}
-            <motion.div variants={itemVariants}>
+            {/* <motion.div variants={itemVariants} className="flex justify-center">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#F8F8F9] border border-[#E5E7EB]">
                 <Brain className="w-4 h-4 mr-2 text-[#25272A]" />
                 <span className="text-sm font-medium text-[#25272A]">Smart Recruiting Platform</span>
               </span>
-            </motion.div>
+            </motion.div> */}
 
             {/* Headline */}
             <motion.div variants={itemVariants} className="space-y-4 lg:space-y-6">
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-center lg:text-left">
-                <span className="text-[#25272A]">Revolutionize Your</span>{' '}
-                <span className="text-[#25272A]">Recruitment</span>
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-center">
+                <span className="text-[#25272A]">Talent Intellegence Platform</span>{' '}
+                {/* <span className="text-[#25272A]">Recruitment</span> */}
               </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-center lg:text-left">
-                Streamline your hiring with intelligent automation. Find better candidates{' '}
-                <span className="text-[#25272A] font-semibold">3x faster</span> while building meaningful connections through data-driven insights.
+              <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed text-center max-w-2xl mx-auto">
+                Recruiters talk to your data and make hiring deciosns - World's first Recruiter Agents{' '}
+                Your peronalized Digital recruiter can automate your tasks.
+
               </p>
             </motion.div>
 
             {/* CTA Button */}
-            <motion.div variants={itemVariants} className="flex justify-center lg:justify-start gap-4">
+            <motion.div variants={itemVariants} className="flex justify-center gap-4">
               <Button 
                 size="lg" 
                 className="h-14 px-8 bg-[#25272A] hover:bg-[#404348] text-white rounded-lg shadow-sm transition-all duration-300 text-lg font-medium flex items-center gap-3"
@@ -111,12 +112,12 @@ const HeroSection = () => {
             {/* Stats */}
             <motion.div
               variants={itemVariants}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 pt-4"
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 lg:gap-4 pt-4 max-w-4xl mx-auto"
             >
               {[
                 { icon: Clock, label: "Hiring Speed", value: "3x Faster" },
                 { icon: Users, label: "Response Rate", value: "85% Better" },
-                { icon: CheckCircle, label: "Placement Rate", value: "95% Success" },
+                { icon: CheckCircle, label: "Candidate Analysis", value: "95% Accurate" },
                 { icon: ChartBar, label: "Candidate Quality", value: "2x Better" },
               ].map((stat, index) => (
                 <motion.div
@@ -136,12 +137,12 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+          {/* Image - Now at Bottom */}
+          {/* <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex-1 w-full max-w-md lg:max-w-none relative mt-8 lg:mt-0"
+            className="w-full max-w-2xl mx-auto mt-8"
           >
             <div className="relative w-full aspect-[4/3] px-4 lg:px-0">
               <Image
@@ -155,7 +156,6 @@ const HeroSection = () => {
                 quality={85}
               />
               
-              {/* Floating UI Elements */}
               <motion.div
                 animate={{ y: [-5, 5, -5] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
@@ -180,7 +180,7 @@ const HeroSection = () => {
                 <CheckCircle className="w-6 h-6 text-[#25272A]" />
               </motion.div>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>
