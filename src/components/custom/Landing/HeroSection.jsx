@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Users, Clock, ChartBar, Brain } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import {WorldMap} from '@/components/ui/world-map'
-
+import VideoPlayer from '@/components/custom/Landing/videoplayer';
 const HeroSection = () => {
   const router = useRouter();
 
@@ -127,6 +127,24 @@ const HeroSection = () => {
                 Your peronalized Digital recruiter can automate your tasks.
               </p>
             </motion.div>
+
+            {/* Video Dialog */}
+            {/* <div className="relative">
+              <HeroVideoDialog
+                className="dark:hidden block"
+                animationStyle="top-in-bottom-out"
+                videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+                thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
+                thumbnailAlt="Hero Video"
+              />
+              <HeroVideoDialog
+                className="hidden dark:block"
+                animationStyle="top-in-bottom-out"
+                videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+                thumbnailSrc="https://startup-template-sage.vercel.app/hero-dark.png"
+                thumbnailAlt="Hero Video"
+              />
+            </div> */}
 
             {/* CTA Button */}
             <motion.div variants={itemVariants} className="flex justify-center gap-4">
