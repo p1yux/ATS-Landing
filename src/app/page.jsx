@@ -16,7 +16,7 @@ export default function Home() {
       <NavBar />
       <HeroSection />
       {/* <Companies /> */}
-      <VideoPlayer />
+      {/* <VideoPlayer /> */}
       <ATSFor />
       <Pills />
       <About />
