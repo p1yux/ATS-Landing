@@ -72,15 +72,15 @@ const NavBar = () => {
         animate={{ y: 0 }}
         className={`max-w-[83rem] w-full rounded-lg transition-all duration-300 ${
           scrolled 
-            ? 'bg-white shadow-sm border border-gray-100' 
-            : 'bg-white'
+            ? 'bg-white/95 backdrop-blur-md shadow-lg border border-gray-100' 
+            : 'bg-white/90 backdrop-blur-sm'
         }`}
       >
-        <div className="px-4 lg:px-6">
+        <div className="px-4 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo and Brand */}
-            <Link href="/" className="flex items-center">
-              <span className="text-xl md:text-2xl font-bold text-[#25272A]">
+            <Link href="/" className="flex items-center group">
+              <span className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#25272A] to-[#444] transition-all duration-300 group-hover:to-purple-600">
                 Hiremod
               </span>
             </Link>
@@ -89,36 +89,43 @@ const NavBar = () => {
             <div className="hidden md:flex items-center space-x-8">
               <Link 
                 href="/"
-                className="text-[#6B7280] hover:text-[#25272A] transition-colors font-medium"
+                className="text-[#6B7280] hover:text-[#25272A] transition-colors font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#25272A] after:transition-all hover:after:w-full"
               >
                 Home
               </Link>
               <a 
                 href="#about"
                 onClick={(e) => handleNavClick(e, 'about')}
-                className="text-[#6B7280] hover:text-[#25272A] transition-colors font-medium cursor-pointer"
+                className="text-[#6B7280] hover:text-[#25272A] transition-colors font-medium cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#25272A] after:transition-all hover:after:w-full"
               >
                 About
               </a>
               <a 
                 href="#faq"
                 onClick={(e) => handleNavClick(e, 'faq')}
-                className="text-[#6B7280] hover:text-[#25272A] transition-colors font-medium cursor-pointer"
+                className="text-[#6B7280] hover:text-[#25272A] transition-colors font-medium cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#25272A] after:transition-all hover:after:w-full"
               >
                 FAQ
               </a>
+              <Link 
+                href="/claire"
+                className="text-purple-600 hover:text-purple-700 transition-colors font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-purple-600 after:transition-all hover:after:w-full"
+              >
+                Claire
+              </Link>
               <Button 
-                className="bg-[#25272A] text-white hover:bg-[#404348] rounded-lg px-6 h-11 shadow-sm transition-all duration-300"
+                className="bg-[#25272A] text-white hover:bg-gray-800 rounded-lg px-6 h-11 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group"
                 onClick={() => window.open('https://calendly.com/aryanjainak/30min', '_blank')}
               >
-                Book a Demo
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-purple-600 to-purple-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span className="relative z-10">Book a Demo</span>
               </Button>
             </div>
 
             {/* Mobile Menu Button */}
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg bg-[#F8F8F9] hover:bg-[#E5E7EB] transition-colors"
+              className="md:hidden p-2 rounded-lg bg-[#F8F8F9] hover:bg-[#E5E7EB] transition-all duration-300 hover:shadow-md"
             >
               {mobileMenuOpen ? (
                 <X className="w-6 h-6 text-[#25272A]" />
@@ -138,37 +145,45 @@ const NavBar = () => {
                 transition={{ duration: 0.2 }}
                 className="md:hidden border-t border-gray-100 mt-2"
               >
-                <div className="py-4 space-y-4">
+                <div className="py-4 space-y-3">
                   <Link 
                     href="/"
-                    className="block px-4 py-2 text-[#6B7280] hover:text-[#25272A] transition-colors font-medium"
+                    className="block px-4 py-3 text-[#6B7280] hover:text-[#25272A] hover:bg-gray-50 rounded-lg transition-all font-medium"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Home
                   </Link>
+                  <Link 
+                    href="/claire"
+                    className="block px-4 py-3 text-purple-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-all font-medium"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Claire
+                  </Link>
                   <a 
                     href="#about"
                     onClick={(e) => handleNavClick(e, 'about')}
-                    className="block px-4 py-2 text-[#6B7280] hover:text-[#25272A] transition-colors font-medium"
+                    className="block px-4 py-3 text-[#6B7280] hover:text-[#25272A] hover:bg-gray-50 rounded-lg transition-all font-medium"
                   >
                     About
                   </a>
                   <a 
                     href="#faq"
                     onClick={(e) => handleNavClick(e, 'faq')}
-                    className="block px-4 py-2 text-[#6B7280] hover:text-[#25272A] transition-colors font-medium"
+                    className="block px-4 py-3 text-[#6B7280] hover:text-[#25272A] hover:bg-gray-50 rounded-lg transition-all font-medium"
                   >
                     FAQ
                   </a>
-                  <div className="px-4 pt-2">
+                  <div className="px-4 pt-3">
                     <Button 
-                      className="w-full bg-[#25272A] text-white hover:bg-[#404348] rounded-full h-11 shadow-sm transition-all duration-300"
+                      className="w-full bg-[#25272A] text-white hover:bg-gray-800 rounded-lg h-12 shadow-md transition-all duration-300 relative overflow-hidden group"
                       onClick={() => {
                         setMobileMenuOpen(false);
                         window.open('https://calendly.com/aryanjainak/30min', '_blank');
                       }}
                     >
-                      Get Started
+                      <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-purple-600 to-purple-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                      <span className="relative z-10">Get Started</span>
                     </Button>
                   </div>
                 </div>

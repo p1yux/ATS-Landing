@@ -7,8 +7,8 @@ export default function VideoPlayer() {
         <HeroVideoDialog
           className="dark:hidden block"
           animationStyle="top-in-bottom-out"
-          videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-          thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
+          videoSrc="https://www.youtube.com/embed/8NoDeGIvlW0"
+          thumbnailSrc="https://img.youtube.com/vi/8NoDeGIvlW0/maxresdefault.jpg"
           thumbnailAlt="Hero Video"
         />
       </div>

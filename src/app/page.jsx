@@ -8,7 +8,6 @@ import Pills from "@/components/custom/Landing/Pills";
 import Companies from "@/components/custom/Landing/Companies";
 import About from "@/components/custom/Landing/About";
 import FAQ from "@/components/custom/Landing/FAQ";
-import VideoPlayer from "@/components/custom/Landing/videoplayer";
 
 export default function Home() {
   return (
@@ -16,7 +15,6 @@ export default function Home() {
       <NavBar />
       <HeroSection />
       {/* <Companies /> */}
-      {/* <VideoPlayer /> */}
       <ATSFor />
       <Pills />
       <About />
