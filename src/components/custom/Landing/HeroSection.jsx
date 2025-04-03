@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Users, Clock, ChartBar } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { HeroVideoDialog } from "@/components/ui/hero-video-dialog";
 import { motion } from 'framer-motion';
-
+import { CpuArchitecture } from "@/components/ui/cpu-architecture";
 const HeroSection = () => {
   const router = useRouter();
 
@@ -13,6 +13,7 @@ const HeroSection = () => {
     <section className="relative pt-16 md:pt-20 lg:pt-24 pb-16 md:pb-20 w-full bg-white overflow-hidden mt-3">
       {/* Modern dotted background */}
       <div className="absolute inset-0">
+        <CpuArchitecture />
         {/* Gradient blobs */}
         <div className="absolute top-20 right-10 w-60 md:w-80 h-60 md:h-80 bg-violet-400/20 rounded-full filter blur-[80px]" />
         <div className="absolute -bottom-20 left-10 w-60 md:w-80 h-60 md:h-80 bg-blue-400/20 rounded-full filter blur-[80px]" />
